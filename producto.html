@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SummerStyle.com</title>
+    <link rel="webside icon" type="png" href="ropa.png">
+    <style>
+
+@keyframes animatedBackground {
+            0% {
+             background-image: url('fondo1.png');
+            }
+            33% {
+             background-image: url('fondo2.png');
+            }
+            66% {
+             background-image: url('fondo3.png');
+            }
+            100% {
+             background-image: url('fondo1.png');
+            }
+        }
+
+        header {
+         background-image: url('fondo1.png'); /* Establece la primera imagen de fondo */
+         background-color: #333;
+         color: #fff;
+         text-align: center;
+         padding: 10px 0;
+         animation: animatedBackground 15s linear infinite; /* Controla la velocidad y dirección del desplazamiento */
+        }
+
+        .seccion {
+            margin-bottom: 40px;
+        }
+
+nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+            position: relative;
+        }
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+            position: relative;
+        }
+        nav ul li a:hover {
+            color: #72c6ec;
+        }
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 100%;
+            height: 2px;
+            background-color: transparent;
+            transition: background-color 0.3s ease;
+        }
+        nav ul li a:hover::after {
+            background-color: #00eeff;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        header {
+            background-image: url('fondotitulo.png'); /* Establece la primera imagen de fondo */
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .marca {
+            font-size: 36px;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+        .slogan-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .slogan {
+            font-style: italic;
+            font-size: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .producto {
+    width: calc(25% - 20px);
+    margin-bottom: 20px;
+    padding: 35px; /* Ajusta el padding para aumentar el tamaño del recuadro */
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out;
+    display: flex; /* Utilizamos flexbox para posicionar el botón */
+    flex-direction: column; /* Apilamos los elementos en una columna */
+    justify-content: flex-start; /* Alineamos los elementos al principio del recuadro */
+    position: relative; /* Añade posición relativa para que el posicionamiento absoluto del botón sea relativo al contenedor del producto */
+}
+
+.producto-info {
+    margin-bottom: 10px; /* Mueve el texto un poco más arriba */
+}
+
+.boton-container {
+    margin-top: 20px; /* Mueve el botón hacia abajo */
+    text-align: center;
+}
+
+        .producto:hover {
+            transform: translateY(-5px);
+        }
+        .producto img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        #contact-info {
+            background-color: #8ad2fc;
+            color: #5c5858cc;
+            padding: 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .producto {
+    position: relative;
+}
+
+
+.ver-detalle {
+    color: #333;
+    text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease;
+}
+
+.ver-detalle:hover {
+    color: #72c6ec;
+    border-bottom: 2px solid #00eeff;
+}
+
+.producto {
+    display: flex;
+    flex-direction: column; /* Asegura que la imagen se centre verticalmente */
+    align-items: center; /* Centra horizontalmente la imagen */
+    text-align: center; /* Centra el texto dentro del contenedor */
+}
+
+.producto img {
+    max-width: 100%; /* Limita el ancho máximo al 100% del contenedor */
+    max-height: 200px; /* Establece una altura máxima para las imágenes */
+    width: auto; /* Ajusta el ancho automáticamente para mantener la proporción de aspecto */
+    height: auto; /* Ajusta la altura automáticamente para mantener la proporción de aspecto */
+    object-fit: cover; /* Ajusta la imagen para cubrir completamente el contenedor */
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Summer Style</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#caballero">Caballero</a></li>
+            <li><a href="#damas">Damas</a></li>
+            <li><a href="#ninos-ninas">Niños y Niñas</a></li>
+            <li><a href="#adolescentes">Adolescentes</a></li>
+            <li><a href="#contact-info" onclick="smoothScroll(event)">Contáctenos</a></li>
+
+        </ul>
+    </nav>
+
+    <div class="slogan-container">
+        <i><h6 class="slogan">Descubre nuestra colección de ropa de alta calidad para este verano</h6></i>
+    </div>
+
+    <div id="caballero" class="container">
+
+            <h2 class="titulo-seccion">Caballero</h2>
+
+            <div class="producto">
+                <div class="producto-info">
+                    <h3>Camiseta de Verano</h3>
+                    <p>Precio: $170.50 MXN</p>
+                </div>
+                <img src="camisadeverano.png" alt="Camiseta de Verano">
+                <div class="boton-container">
+                    <a href="detalle_producto1.html" class="ver-detalle">Ver Detalle</a>
+                </div>
+            </div>
+
+            <div class="producto">
+                <div class="producto-info">
+                    <h3>Shorts Breezy</h3>
+                    <p>Precio: $163.00 MXN</p>
+                </div>
+                <br>
+                <img src="shorthom.png" alt="shorthom">
+                <div class="boton-container">
+                    <a href="detalle_producto2.html" class="ver-detalle">Ver Detalle</a>
+                </div>
+            </div>
+    
+            <div class="producto">
+                <div class="producto-info">
+                    <h3>Pantalón de Mezclilla</h3>
+                    <p>Precio: $285.00 MXN</p>
+                </div>
+                <img src="mezclilla.png" alt="Pantalón de Mezclilla">
+                <div class="boton-container">
+                    <a href="detalle_producto3.html" class="ver-detalle">Ver Detalle</a>
+                </div>
+            </div>
+    
+            <div class="producto">
+                <div class="producto-info">
+                    <h3>Sombrero Brim</h3>
+                    <p>Precio: $200.00 MXN</p>
+                </div>
+                <img src="sombrero.png" alt="Shorts de Playa">
+                <div class="boton-container">
+                    <a href="detalle_producto4.html" class="ver-detalle">Ver Detalle</a>
+                </div>
+            </div>
+    
+            <div class="producto">
+                <div class="producto-info">
+                    <h3>Sandalias Beach</h3>
+                    <p>Precio: $270.00 MXN</p>
+                </div>
+                <img src="sandalia.png" alt="Shorts de Playa">
+                <div class="boton-container">
+                    <a href="detalle_producto5.html" class="ver-detalle">Ver Detalle</a>
+                </div>
+            </div>
+    
+            <div class="producto">
+                <div class="producto-info">
+                    <h3>Bañador Surf </h3>
+                    <p>Precio: $144.00 MXN</p>
+                </div>
+                <img src="bañador.png" alt="Shorts de Playa">
+                <div class="boton-container">
+                    <a href="detalle_producto6.html" class="ver-detalle">Ver Detalle</a>
+                </div>
+            </div>
+    
+    
+    </div>
+
+    <div id="damas" class="container">
+
+        <i><h6 class="slogan">Damas</h6></i>
+
+        <div class="producto">
+            <div class="producto-info">
+                <h3>Vestido Floral</h3>
+                <p>Precio: $251.00 MXN</p>
+            </div>
+            <img src="floreal.png" alt="Camiseta de Verano">
+            <div class="boton-container">
+                <a href="detalle_producto7.html" class="ver-detalle">Ver Detalle</a>
+            </div>
+        </div>
+
+        <div class="producto">
+            <div class="producto-info">
+                <h3>Blusa Sunny</h3>
+                <p>Precio: $125.00 MXN</p>
+            </div>
+            <img src="blusa.png" alt="Vestido Floral">
+            <div class="boton-container">
+                <a href="detalle_producto8.html" class="ver-detalle">Ver Detalle</a>
+            </div>
+        </div>
+
+        <div class="producto">
+            <div class="producto-info">
+                <h3>Shorts Breeze</h3>
+                <p>Precio: $163.00 MXN</p>
+            </div>
+            <img src="shortmujer.png" alt="Pantalón de Mezclilla">
+            <div class="boton-container">
+                <a href="detalle_producto9.html" class="ver-detalle">Ver Detalle</a>
+            </div>
+        </div>
+
+        <div class="producto">
+            <div class="producto-info">
+                <h3>Sombrero Sunbow</h3>
+                <p>Precio: $144.00 MXN</p>
+            </div>
+            <img src="sombrerom.png" alt="Shorts de Playa">
+            <div class="boton-container">
+                <a href="detalle_producto10.html" class="ver-detalle">Ver Detalle</a>
+            </div>
+        </div>
+
+        <div class="producto">
+            <div class="producto-info">
+                <h3>Sandalias Sunny</h3>
+                <p>Precio: $125.00 MXN</p>
+            </div>
+            <img src="sandalias.png" alt="Shorts de Playa">
+            <div class="boton-container">
+                <a href="detalle_producto11.html" class="ver-detalle">Ver Detalle</a>
+            </div>
+        </div>
+
+        <div class="producto">
+            <div class="producto-info">
+                <h3>Bikini Tropic </h3>
+                <p>Precio: $186.48 MXN</p>
+            </div>
+            <img src="bikini.png" alt="Shorts de Playa">
+            <div class="boton-container">
+                <a href="detalle_producto12.html" class="ver-detalle">Ver Detalle</a>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div id="ninos-ninas" class="container">
+
+        <i><h6 class="slogan">Niños y Niñas</h6></i>
+
+        <div class="producto">
+            <div class="producto-info">
+                <h3>Camiseta Fun</h3>
+                <p>Precio: $150.50 MXN </p>
+            </div>
+            <img src="camisetaniño.png" alt="Camiseta de Verano">
+            <div class="boton-container">
+                <a href="detalle_producto13.html" class="ver-detalle">Ver Detalle</a>
+            </div>
+        </div>
+
+        <div class="producto">
+            <div class="producto-info">
+                <h3>Bermudas Beach</h3>
+                <p>Precio: $199.65 MXN</p>
+            </div>
+            <img src="bermudas.png" alt="Vestido Floral">
+            <div class="boton-container">
+                <a href="detalle_producto14.html" class="ver-detalle">Ver Detalle</a>
+            </div>
+        </div>
+
+        <div class="producto">
+            <div class="producto-info">
+                <h3>Vestido Fruit</h3>
+                <p>Precio: $250.67 MXN</p>
+            </div>
+            <img src="vestido.png" alt="Pantalón de Mezclilla">
+            <div class="boton-container">
+                <a href="detalle_producto15.html" class="ver-detalle">Ver Detalle</a>
+            </div>
+        </div>
+
+        <div class="producto">
+            <div class="producto-info">
+                <h3>Sombrero Sunhat</h3>
+                <p>Precio: $100.80 MXN</p>
+            </div>
+            <img src="sombreron.png" alt="Shorts de Playa">
+            <div class="boton-container">
+                <a href="detalle_producto16.html" class="ver-detalle">Ver Detalle</a>
+            </div>
+        </div>
+
+        <div class="producto">
+            <div class="producto-info">
+                <h3>Sandalias Sunny</h3>
+                <p>Precio: $78.54 MXN</p>
+            </div>
+            <img src="chanclas.png" alt="Shorts de Playa">
+            <div class="boton-container">
+                <a href="detalle_producto17.html" class="ver-detalle">Ver Detalle</a>
+            </div>
+        </div>
+
+        <div class="producto">
+            <div class="producto-info">
+                <h3>Bañador Splash </h3>
+                <p>Precio: $150.00 MXN</p>
+            </div>
+            <img src="bañadorni.png" alt="Shorts de Playa">
+            <div class="boton-container">
+                <a href="detalle_producto18.html" class="ver-detalle">Ver Detalle</a>
+            </div>
+        </div>
+
+        
+
+    </div>
+
+    <div id="adolescentes" class="container">
+
+        <h2 class="titulo-adolescentes">Adolescentes</h2>
+
+        <div class="producto">
+            <div class="producto-info">
+                <h3>Top Tie-Dye</h3>
+                <p>Precio: $200.50 MXN</p>
+            </div>
+            <img src="top.png" alt="Camiseta de Verano">
+            <div class="boton-container">
+                <a href="detalle_producto19.html" class="ver-detalle">Ver Detalle</a>
+            </div>
+        </div>
+
+        <div class="producto">
+            <div class="producto-info">
+                <h3>Jeans Mom</h3>
+                <p>Precio: $460.32 MXN</p>
+            </div>
+            <img src="jeans.png" alt="Vestido Floral">
+            <div class="boton-container">
+                <a href="detalle_producto20.html" class="ver-detalle">Ver Detalle</a>
+            </div>
+        </div>
+
+        <div class="producto">
+            <div class="producto-info">
+                <h3>Falda Flora</h3>
+                <p>Precio: $278.00 MXN</p>
+            </div>
+            <img src="falda.png" alt="Pantalón de Mezclilla">
+            <div class="boton-container">
+                <a href="detalle_producto21.html" class="ver-detalle">Ver Detalle</a>
+            </div>
+        </div>
+
+        <div class="producto">
+            <div class="producto-info">
+                <h3>Gorra Patch</h3>
+                <p>Precio: $180.90 MXN</p>
+            </div>
+            <img src="gorra.png" alt="Shorts de Playa">
+            <div class="boton-container">
+                <a href="detalle_producto22.html" class="ver-detalle">Ver Detalle</a>
+            </div>
+        </div>
+
+        <div class="producto">
+            <div class="producto-info">
+                <h3>Tenis Retro</h3>
+                <p>Precio: $370.00 MXN</p>
+            </div>
+            <img src="tenis.png" alt="Shorts de Playa">
+            <div class="boton-container">
+                <a href="detalle_producto23.html" class="ver-detalle">Ver Detalle</a>
+            </div>
+        </div>
+
+        <div class="producto">
+            <div class="producto-info">
+                <h3>Bañador Vintage </h3>
+                <p>Precio: $250.78 MXN</p>
+            </div>
+            <img src="bañadoretro.png" alt="Shorts de Playa">
+            <div class="boton-container">
+                <a href="detalle_producto24.html" class="ver-detalle">Ver Detalle</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact-info">
+        <h2>Contáctenos</h2>
+        <p>Facebook: <i>Summer Style </i></p>
+        <p>Instagram: <i>@Summer_Style</i></p>
+        <p>Gmail: <i>SummerStyle@gmail.com</i></p>
+        <p>Telefono:<i><u> 922 185 5612</u></i></p>
+    </div>
+
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
